@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Ansoft.Education.EF.Codes>
+@{
+    ViewBag.Title = "Python Code Sources";
+}
+<link href="@Url.Content("~/Content/CSS/ListItem.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/CSS/LayoutStuff.css")" rel="stylesheet" type="text/css" />
+<br />
+@using (Html.BeginForm("List", "Codes", FormMethod.Post))
+{
+    <div class="codes-operation-bar">
+        <div class="dropdown">
+            @Html.DropDownList("Module", (List<SelectListItem>)ViewBag.selItems, new { @class = "dropdown-select" })
+        </div>
+        @*"--Please Select--",*@
+        <input type="submit" id="logOnBtn" value="Search" class="codes-operation-button" />
+    </div>
+}
+<div id="codeList" class="ansoft-list-frame">
+    <div id="codeHeader" class="ansoft-list-frame-header">
+        <div class="ansoft-list-frame-header-span-ForCodeName">
+            File Name
+        </div>
+        <div class="ansoft-list-frame-header-span-ForCodeAuthor">
+            Author
+        </div>
+        <div class="ansoft-list-frame-header-span-ForCodeTime">
+            Create Time
+        </div>
+    </div>
+    <div id="codeBody" class="ansoft-list-frame-body">
+        @foreach (var codeItem in Model)
+        {
+            <div id="codeRow" class="ansoft-list-frame-row">
+                <input type="hidden" value="@codeItem.ID.ToString()" />
+                <div class="ansoft-list-frame-row-span-ForCodeName">
+                    @Html.DisplayFor(modelItem => codeItem.Name)
+                </div>
+                <div class="ansoft-list-frame-row-span-ForCode-Operation">
+                    &nbsp
+                    <img class="img-row-icon" src="../../Source/Images/edit.png" alt="Edit" title="Edit" />
+                    <img class="img-row-icon" src="../../Source/Images/download.png" alt="Download" title="Download" />
+                    @*<a href="/Codes/DeleteById/@codeItem.ID.ToString()">*@
+                    <img class="img-row-icon delete" src="../../Source/Images/delete.png" alt="Delete" title="Delete" />
+                    @*</a>*@
+                </div>
+                <div class="ansoft-list-frame-row-span-ForCodeAuthor">
+                    @Html.DisplayFor(modelItem => codeItem.Author)
+                </div>
+                <div class="ansoft-list-frame-row-span-ForCodeTime">
+                    @Html.DisplayFor(modelItem => codeItem.CreateTime)
+                </div>
+            </div>
+        }
+
+        <!--列表的尾部，作为分页-->
+        <div id="codeRows" class="ansoft-list-frame-row">
+            1,2,3,4,5
+        </div>
+    </div>
+</div>
+<br />
+@Html.ActionLink("Add Code File", "Add", "Codes", new { }, new { @class = "codes-operation-button" })
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".ansoft-list-frame-row").mouseover(function () {
+            var control = this.children[2];
+            control.style.visibility = 'visible';
+
+        });
+        $(".ansoft-list-frame-row").mouseout(function () {
+            var control = this.children[2];
+            control.style.visibility = 'hidden';
+
+        });
+
+        //删除代码记录
+        $(".delete").click(function () {
+            var rowItem = this.parentNode.parentNode;
+            var codeId = rowItem.children[0].value;
+
+            $.ajax({
+                type: "POST",
+                url: "../../AsyncService/CodesService.ashx",
+                data: { 'method': "DelCodeById", 'CodeId': codeId },
+                dataType: "text", //json
+
+                success: function (result) {
+                    if (result != null) {
+                        //alert(result.toString());
+                        //删除当前的行
+                        rowItem.style.display = 'none';
+                    }
+                },
+                error: function (MLHttpRequest, textStatus, errorThrown) {
+                    alert("fail" + errorThrown);
+                }
+            });
+        })
+    });
+</script>

@@ -1,0 +1,53 @@
+﻿#frame-top-logo{
+  float: left;
+}
+
+#frame-top-logo:hover{
+  cursor:pointer;
+}
+
+
+#frame-top-personal
+{
+  height: 36px;
+  line-height:36px;
+  position:fixed;
+  right: 0px;
+  width: 400px;
+  float: left;
+  text-align: right;
+}
+
+#frame-top-setting
+{
+  height: 36px;
+  width: 36px;
+  
+  margin-left: 280px;
+  background-image: URL('../../Source/Images/set.png');
+  background-repeat: no-repeat;
+  background-position:center;
+  float: left;
+}
+
+#frame-top-setting:hover
+{
+  cursor:pointer;
+  background-image: URL('../../Source/Images/set_hover.png');
+}
+
+#frame-top-loginUser
+{
+  width: 60px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  margin-left: 10px;
+  float: left;
+}
+
+#frame-top-loginUser:hover
+{
+  cursor:pointer;
+  color:red;
+}

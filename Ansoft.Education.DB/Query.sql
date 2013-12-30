@@ -1,0 +1,6 @@
+SELECT * FROM Menu
+SELECT * FROM Module
+
+SELECT * FROM Codes
+
+--DELETE FROM Codes WHERE ID<=9

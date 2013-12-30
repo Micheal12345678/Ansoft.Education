@@ -1,0 +1,59 @@
+#main{
+  height: 550px;
+  width:  900px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:40px; 
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+#main-bottom
+{
+  height: 50px;
+  width:  900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+#ad{
+	height: 500px;
+  	width:  400px;
+  	margin-left: 20px;
+  	float: left;
+  	background-image: URL('../../Source/Images/ansoft.jpg');
+}
+
+#login{
+	text-align: left;
+	height: 500px;
+  	width:  400px;
+  	margin-left: 50px;
+  	float: left;
+}
+
+#login-logo{
+	height: 150px;
+  	width:  400px;
+  	background-image: URL('../../Source/Images/logo.jpg');
+}
+
+#login-form{
+	height: 150px;
+  width:  400px;
+}
+
+#login-notice{
+	font: 12px;
+	color: black;
+	margin-top: 185px;
+	height: 12px;
+  	width:  400px;
+}
+
+#main-bottom-right
+{
+	font-size: 14px;
+	color:#000;
+}

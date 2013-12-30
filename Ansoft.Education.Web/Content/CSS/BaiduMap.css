@@ -1,0 +1,95 @@
+﻿/*#MapContainer
+{
+    height:500px;
+    width:720px;
+    border:1px solid gray; 
+}*/
+
+.map-page
+{
+  padding-top:20px;
+  margin-left:40px;
+}
+
+.map-container
+{
+  width: 920px; 
+  height: 550px; 
+  margin-top:20px;
+  border:1px solid black;
+}
+
+
+.PointWindow
+{
+   text-align:center;
+   width:300px;
+   height:90px;
+   /*border:1px solid gray;*/
+   margin-top:10px;
+}
+
+.PointWindow-Show
+{
+   width:300px;
+   height:140px;
+   /*border:1px solid gray;*/
+   margin-top:10px;
+}
+
+
+.Form-Row
+{
+    text-align:left;
+    margin-top:5px;   
+    margin-bottom:5px; 
+}
+
+.Form-Row-Hide
+{
+    display:none;
+}
+
+.Form-Row-Tip
+{
+    color:Red;
+    text-align:left;
+    margin-left:10px;
+}
+
+.Form-Label
+{
+    width:110px;
+}
+
+.Form-Button-Width
+{
+    width:70px;
+   
+}
+.Form-Button-Space-20
+{
+     margin-right:20px;
+}
+
+.Form-Button-Space-10
+{
+     margin-right:10px;
+}
+
+.Form-Text
+{
+    width:200px;
+}
+
+.Form-Text-Short
+{
+    width:74px;
+}
+
+.Form-Operation
+{
+    margin-top:5px;
+    text-align:right;
+}
+

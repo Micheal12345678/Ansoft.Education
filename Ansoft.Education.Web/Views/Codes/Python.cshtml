@@ -1,0 +1,31 @@
+﻿@model  Ansoft.Education.Web.Models.CodeModels
+
+@{
+    ViewBag.Title = "Python Code Sources";
+}
+<link href="@Url.Content("~/Content/CSS/ListItem.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/CSS/LayoutStuff.css")" rel="stylesheet" type="text/css" />
+
+<h2>
+    Python</h2>
+<div  class="codes-operation-bar">
+     @Html.ActionLink("Add Python Code", "Add", "Codes", new { }, new { @class = "codes-operation-button" })
+</div>
+<div id="codes-list">
+    @for (int i = 0; i < 10; i++)
+    {
+        <div class="code-item">
+            <img class="code-item-logo" src="../../Source/Images/Python2.png" alt="logo" />
+            <div class="code-item-row">
+                Code:<span class="code-item-row-span">Syntax.py</span> Author:<span class="code-item-row-span">Micheal</span>
+                Date:<span class="code-item-row-span">2013-12-13</span> Number:<span class="code-item-row-span">AN-P00023</span>
+            </div>
+            <div class="code-item-description">
+                The base syntax in python
+            </div>
+            <div class="code-item-row code-item-row-align-right">
+                @Html.ActionLink("Detail", "ViewCode", "Codes", new { }, new { @class = "code-item-button" })
+            </div>
+        </div>
+    }
+</div>

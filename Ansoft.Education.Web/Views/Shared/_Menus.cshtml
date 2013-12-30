@@ -1,0 +1,29 @@
+﻿<link href="@Url.Content("~/Content/CSS/Menu.css")" rel="stylesheet" type="text/css" />
+
+<div id="menulist" class=""> 
+    <h2 class="meun-type">Code Sources</h2>
+	<div class="menu-content">
+		<ul class="menu-ul">
+            @Html.ActionLink("Python", "List", "Codes", new { }, new { @class = "menu-ul-a" })
+        </ul>
+	</div>
+
+
+	<h2 class="meun-type">WEB PROJECT</h2>
+	<div class="menu-content">
+		<ul class="menu-ul">
+            @Html.ActionLink("HTML5", "Html5", "Web", new { }, new { @class = "menu-ul-a" })
+			@Html.ActionLink("JS", "Js", "Web", new { }, new { @class = "menu-ul-a"})
+			@*@Html.ActionLink("CSS", "Css", "Web", new { }, new { @class = "menu-ul-a" })*@
+			@Html.ActionLink("BaiduMap", "BaiduMap", "Web", new { }, new { @class = "menu-ul-a" })
+            @Html.ActionLink("HighChart", "HighChart", "Web", new { }, new { @class = "menu-ul-a" })
+            @Html.ActionLink("Text Editor", "TextEditor", "Web", new { }, new { @class = "menu-ul-a" })
+		    @Html.ActionLink("View Code", "ViewCode", "Web", new { }, new { @class = "menu-ul-a" })
+            @Html.ActionLink("Grid", "Grid", "Web", new { }, new { @class = "menu-ul-a" })
+        </ul>
+	</div>
+    <input id="action" type="hidden" value="@ViewContext.RouteData.Values["action"]" />
+</div>
+
+<script src="@Url.Content("~/Scripts/menu.js")" type="text/javascript"></script>
+

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "BaiduMap";
+}
+
+
+<link href="@Url.Content("~/Content/CSS/BaiduMap.css")" rel="stylesheet" type="text/css" />
+
+<div id="title" class="map-page">
+    <h2>Your will see any where.</h2>
+    <p>Refer:<a href="http://developer.baidu.com/map/" target="_blank">百度地图官方网站</a></p>
+    <p> Baidu key：1de5653c1fbea3a6bf727933c880fe5f</p>
+    <div id="mapContainer" class="map-container">
+    </div>
+
+</div>
+
+
+<script src='http://api.map.baidu.com/api?v=2.0&ak=1de5653c1fbea3a6bf727933c880fe5f' type='text/javascript'></script>
+<script src="@Url.Content("~/Scripts/BaiduMap/BaiduMapBase.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/BaiduMap/MapOnWeb.js")" type="text/javascript"></script>

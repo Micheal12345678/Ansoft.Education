@@ -1,0 +1,51 @@
+
+
+#frame-main{
+  /*height: 886px;*/
+  width:  1260px;
+  height:auto;
+  min-height:886px;
+  margin-top:36px; 
+}
+
+#frame-top{
+  position:fixed;  /*根据浏览器位置定位，参数 top left bottom right*/
+  top:0; 
+  left:0; 
+  z-index:5;   /*z-index越大，离我们越近*/
+
+  height: 36px;
+  line-height: 36px;
+  width:  100%;
+  background-color: black;
+  color:white;
+}
+
+#frame-main-left
+{
+  width: 250px;
+  height: inherit;
+  float: left;
+  /*background-color: #e8e6e6;*/
+  text-align: center;
+  /*border-right: 1px solid black;*/
+}
+
+#menulist
+{
+  margin-left: 15px;
+}
+
+#frame-main-content
+{
+   float: left;
+   width: 970px;
+   height: inherit;
+   padding-left:20px;
+   padding-top:10px;
+   
+}
+
+
+
+

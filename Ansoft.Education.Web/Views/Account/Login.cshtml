@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Login Education System";
+    Layout = "";
+}
+<html lang="chs">
+	<head>
+		<meta charset="utf-8" />
+		<title>Login Education System</title>
+		<link rel="stylesheet" href="@Url.Content("../Content/CSS/Common.css")" />
+        <link rel="stylesheet" href="@Url.Content("../Content/CSS/Control.css")" />
+		<link rel="stylesheet" href="@Url.Content("../Content/CSS/Login.css")" />
+	<head/>
+	<body>
+		<div id="main">
+			<div id="ad"></div>
+			<div id="login">
+				<div id="login-logo"></div>
+				<div id="login-form">
+					<input id="userId" class="login-form-text" type="text" placeholder="example@hotmail.com"/>
+					<input id="userPwd" class="login-form-text" type="text" placeholder="password"/>
+                    @Html.ActionLink("Login", "Index", "Home", new { }, new { @class = "login-form-button" })
+				</div>
+				<div id="login-notice">We can change the world.</div>
+			</div>
+		</div>
+		<div id="main-bottom">
+			<span id="main-bottom-right">©2013 Ansoft</span>	 
+		</div>
+	<body/>
+<html>

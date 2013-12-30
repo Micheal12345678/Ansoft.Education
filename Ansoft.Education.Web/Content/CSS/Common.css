@@ -1,0 +1,55 @@
+body{ 
+	font-size: 12px;
+	color:Black;
+	margin: 0px 0px 0px 0px;
+	font-family: "Microsoft Yahei", Verdana, Simsun, "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, "sans-serif";
+    overflow-x:hidden;
+}
+
+a
+{
+   color:Red;
+}
+
+li{
+	list-style-type: none;
+}
+
+label
+{
+    font-weight:bold;
+	width: 80px;
+	display: inline-block;  
+}
+
+#form-main {
+    margin-top:20px;
+}
+
+#form-main div{
+    height:30px;
+}
+
+#form-main input{
+	width: 250px;
+    border:1px solid gray;
+}
+
+
+#form-main progress {
+    width: 250px;
+}
+
+#form-main .form-button
+{
+    width: 100px;
+    border:none;
+    margin-left:236px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+.meun-type
+{
+	text-align: left;
+	color:black;
+}
+
+.meun-type:hover
+{
+  cursor:pointer;
+  color:red; 
+}
+
+.menu-content
+{
+  
+}
+
+.menu-ul{
+  
+}
+
+.menu-ul:hover{
+  
+}
+
+.menu-ul-a
+{
+   display:block;
+   color:red;
+   text-decoration:none;
+   font-size: 14px;
+   font-weight:bold; 
+   text-align: left;
+}
+
+.menu-ul-a:hover
+{
+  cursor:pointer;
+  color:red;  
+}
+
+.menu-content
+{
+  /*display: none;*/
+}

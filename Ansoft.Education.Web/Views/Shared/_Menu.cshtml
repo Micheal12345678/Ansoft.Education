@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Ansoft.Education.Web.Models.MenuModel>
+@*旧的CSS样式：Tree结构*@
+@*<link href="@Url.Content("~/Content/CSS/Menu.css")" rel="stylesheet" type="text/css" />
+*@@*新的CSS样式*@
+<link href="@Url.Content("~/Content/CSS/Menu2.css")" rel="stylesheet" type="text/css" />
+
+<div id="menulist" class="menu2-frame">
+@*    @foreach (var item in Model)
+    {   <h2 class="meun-type">
+        @item.Text</h2>
+        <div class="menu-content">
+            <ul id="menu">
+                @foreach (var subItem in item.Chirldren)
+                { 
+                    @Html.ActionLink(subItem.Text, subItem.Action, subItem.Controller,null, new { @class = "menu-ul-a" })
+                }
+            </ul>
+        </div> 
+    }
+    <input id="action" type="hidden" value="@ViewContext.RouteData.Values["action"]" />
+*@
+ @Html.ActionLink("Code Library", "List", "Codes", null, new { @class = "meun2-item" })
+ @Html.ActionLink("Task Scheduling", "Index", "Task", null, new { @class = "meun2-item" })
+
+</div>
+@*<script src="@Url.Content("~/Scripts/menu.js")" type="text/javascript"></script>*@

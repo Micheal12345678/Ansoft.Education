@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.Title = "Html5";
+}
+
+<h2>The info from WCF: @ViewBag.PyHi</h2>
+
+<h2>
+    参考网站</h2>
+<hr />
+Refer :<a href="http://www.w3school.com.cn/html5/" target="_blank">W3C School</a>
+
+<h2>
+    多媒体</h2>
+<hr />
+<audio id="audioplayer" preload loop controls>
+    <!--autoplay -->
+    <source src="../../Source/Music/偶阵雨.mp3" />
+    <source src="../../Source/Music/爱久见人心.mp3" />
+</audio>
+autoplay
+<br />
+<button id="toggle" onclick="toggleSound()">
+    Play</button>
+<button id="addVolume" onclick="changeVolume('+')">
+    +</button>
+<button id="minusVolume" onclick="changeVolume('-')">
+    -</button>
+<div id="videoInfo">
+</div>
+
+<h2>
+    表单</h2>
+<hr />
+<form id="form-main">
+<div>
+    <label for="phone">
+        电话</label>
+    <input id="telephone" type="tel" required="true" autofocus="true" />
+    pattern属性是正则表达式
+</div>
+<div>
+    <label for="email">
+        邮件</label>
+    <input type="email" list="contacts" autocomplete="off" />
+</div>
+<div>
+    <label for="range">
+        范围</label>
+    <input id="age" class="range" type="range" min="0.0" max="1" step="0.05" value="0.5"
+        onchange="ageDisplay.value=value;taskprocess.value=value;">
+    <!--Telephone.value=value;-->
+    <output id="ageDisplay">0.5</output>
+</div>
+<div>
+    <label for="process">
+        进度条</label>
+    <progress id="taskprocess" value="0.5" max="1">
+    </progress>
+</div>
+<div>
+    <label for="Time">
+        时间</label>
+    <input type="date" value="" />
+</div>
+<div>
+    <label for="name">
+        名字</label>
+    <input name="name" placeholder="First and last name" autocomplete="off" spellcheck="true" />
+</div>
+<div>
+    <label for="color">
+        颜色</label>
+    <input id="colorinput" name="color" type="color" value="#ff0000" autocomplete="off"
+        spellcheck="true" />
+    set value to change color
+</div>
+<div>
+    <label for="color">
+        网址</label>
+    <input name="website" type="url" autocomplete="off" />
+    http://www.baidu.com
+</div>
+@*<div>
+    <label for="color">
+        </label>
+   <output id="result" onforminput="resCalc()">outPut</output>
+</div>*@
+<input type="submit" class="form-button button-normal " value="Submit" />
+<datalist id="contacts">
+    <option value="x@example.com" label="Racer X">
+    <option value="peter@example.com" label="Peter">
+</datalist>
+</form>
+<h2>
+    地理信息</h2>
+<hr />
+<label for="geoloaction">
+    您的位置</label>
+<label id="coordinate" style="width: 148px;">
+    0.0 0.0</label>
+<button onclick="getLocation()">
+    获取</button>
+
+<h2>
+    本地存储与会话存储
+</h2>
+<hr />
+<p>
+    localStorage & sessionStorage
+</p>
+<div>
+    <label for="color">
+        本地存储</label>
+    <input id="localinput" type="text" autocomplete="off" />
+    <button onclick="setlocalStorage()">
+        存储</button>
+    <button onclick="getlocalStorage()">
+        获取</button>
+    <span id="localinputcontent"></span>
+</div>
+<br />
+<div>
+    <label for="color">
+        会话存储</label>
+    <input id="sessioninput" type="text" autocomplete="off" />
+    <button onclick="setSessionStorage()">
+        存储</button>
+    <button onclick="getSessionStorage()">
+        获取</button>
+    <span id="sessioninputcontent"></span>
+</div>
+
+@*<div style="height:400px;">
+
+</div>*@
+
+<!--
+<h2>
+    网页缓存</h2>
+<hr />
+<p>
+    HTML5 引入了应用程序缓存，这意味着 web 应用可进行缓存，并可在没有因特网连接时进行访问。</p>
+<p>
+    应用程序缓存为应用带来三个优势：</p>
+<ul>
+    <li>离线浏览 - 用户可在应用离线时使用它们</li>
+    <li>速度 - 已缓存资源加载得更快</li>
+    <li>减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。</li>
+</ul>
+-->
+<script src="@Url.Content("~/Scripts/audio.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/geolocation.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/storage.js")" type="text/javascript"></script>

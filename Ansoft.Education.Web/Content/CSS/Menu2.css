@@ -1,0 +1,22 @@
+﻿.menu2-frame
+{
+    margin-top:15px;   
+}
+
+.meun2-item
+{
+    text-align:left;
+    display:block;
+    font-size:16px;
+    font-weight:bold;
+    color:Black;
+    text-decoration:none;
+    height:30px;
+    line-height:30px;
+}
+
+.meun2-item:hover
+{
+    cursor:pointer;
+    background-color:#d6d6d6;
+}

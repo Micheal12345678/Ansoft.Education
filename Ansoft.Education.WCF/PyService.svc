@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Ansoft.Education.WCF.PyService" CodeBehind="PyService.svc.cs" %>

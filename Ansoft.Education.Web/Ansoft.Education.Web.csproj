@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5810B84B-FEC2-45FD-972C-1495A0DFE63E}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ansoft.Education.Web</RootNamespace>
+    <AssemblyName>Ansoft.Education.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="GridMvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Source\Grid.Mvc.3\GridMvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncService\CodesService.ashx.cs">
+      <DependentUpon>CodesService.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CodesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\WebController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CodeModels.cs" />
+    <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\ModuleModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CSS\BaiduMap.css" />
+    <Content Include="Content\CSS\Common.css" />
+    <Content Include="Content\CSS\Control.css" />
+    <Content Include="Content\CSS\Gridmvc.css" />
+    <Content Include="Content\CSS\HighChart.css" />
+    <Content Include="Content\CSS\HomeIndex.css" />
+    <Content Include="Content\CSS\LayoutStuff.css" />
+    <Content Include="Content\CSS\ListItem.css" />
+    <Content Include="Content\CSS\Master.css" />
+    <Content Include="Content\CSS\Login.css" />
+    <Content Include="Content\CSS\Menu.css" />
+    <Content Include="Content\CSS\Menu2.css" />
+    <Content Include="Content\CSS\TopBar.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Page\examples\area-basic\index.htm" />
+    <Content Include="Page\examples\area-inverted\index.htm" />
+    <Content Include="Page\examples\area-missing\index.htm" />
+    <Content Include="Page\examples\area-negative\index.htm" />
+    <Content Include="Page\examples\area-stacked-percent\index.htm" />
+    <Content Include="Page\examples\area-stacked\index.htm" />
+    <Content Include="Page\examples\arearange-line\index.htm" />
+    <Content Include="Page\examples\arearange\index.htm" />
+    <Content Include="Page\examples\areaspline\index.htm" />
+    <Content Include="Page\examples\bar-basic\index.htm" />
+    <Content Include="Page\examples\bar-negative-stack\index.htm" />
+    <Content Include="Page\examples\bar-stacked\index.htm" />
+    <Content Include="Page\examples\box-plot\index.htm" />
+    <Content Include="Page\examples\bubble-3d\index.htm" />
+    <Content Include="Page\examples\bubble\index.htm" />
+    <Content Include="Page\examples\column-basic\index.htm" />
+    <Content Include="Page\examples\column-drilldown\index.htm" />
+    <Content Include="Page\examples\column-negative\index.htm" />
+    <Content Include="Page\examples\column-parsed\index.htm" />
+    <Content Include="Page\examples\column-rotated-labels\index.htm" />
+    <Content Include="Page\examples\column-stacked-and-grouped\index.htm" />
+    <Content Include="Page\examples\column-stacked-percent\index.htm" />
+    <Content Include="Page\examples\column-stacked\index.htm" />
+    <Content Include="Page\examples\columnrange\index.htm" />
+    <Content Include="Page\examples\combo-dual-axes\index.htm" />
+    <Content Include="Page\examples\combo-multi-axes\index.htm" />
+    <Content Include="Page\examples\combo-regression\index.htm" />
+    <Content Include="Page\examples\combo\index.htm" />
+    <Content Include="Page\examples\dynamic-click-to-add\index.htm" />
+    <Content Include="Page\examples\dynamic-master-detail\index.htm" />
+    <Content Include="Page\examples\dynamic-update\index.htm" />
+    <Content Include="Page\examples\error-bar\index.htm" />
+    <Content Include="Page\examples\funnel\index.htm" />
+    <Content Include="Page\examples\gauge-clock\index.htm" />
+    <Content Include="Page\examples\gauge-dual\index.htm" />
+    <Content Include="Page\examples\gauge-speedometer\index.htm" />
+    <Content Include="Page\examples\gauge-vu-meter\index.htm" />
+    <Content Include="Page\examples\line-ajax\index.htm" />
+    <Content Include="Page\examples\line-basic\index.htm" />
+    <Content Include="Page\examples\line-labels\index.htm" />
+    <Content Include="Page\examples\line-log-axis\index.htm" />
+    <Content Include="Page\examples\line-time-series\index.htm" />
+    <Content Include="Page\examples\pie-basic\index.htm" />
+    <Content Include="Page\examples\pie-donut\index.htm" />
+    <Content Include="Page\examples\pie-gradient\index.htm" />
+    <Content Include="Page\examples\pie-legend\index.htm" />
+    <Content Include="Page\examples\polar-spider\index.htm" />
+    <Content Include="Page\examples\polar-wind-rose\index.htm" />
+    <Content Include="Page\examples\polar\index.htm" />
+    <Content Include="Page\examples\renderer\index.htm" />
+    <Content Include="Page\examples\scatter\index.htm" />
+    <Content Include="Page\examples\spline-inverted\index.htm" />
+    <Content Include="Page\examples\spline-irregular-time\index.htm" />
+    <Content Include="Page\examples\spline-plot-bands\index.htm" />
+    <Content Include="Page\examples\spline-symbols\index.htm" />
+    <Content Include="Page\examples\waterfall\index.htm" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\pom.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverter.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverterException.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\AbstractPool.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\BlockingQueuePool.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectFactory.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectPool.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\PoolException.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ServerObjectFactory.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\Server.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\ServerState.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\TimeOut.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\MimeType.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\data.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-convert.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-more.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highstock.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\spring-convert.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\data.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-convert.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-more.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highstock.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\spring-convert.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\highcharts-export-convert.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\pom.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ExportController.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\META-INF\context.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\demo.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\Highcharts-icon-160px.png" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\codemirror.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\codemirror.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\index.html" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\javascript\typescript.html" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\index.html" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\mode\xml\xml.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\closetag.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\dialog.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\dialog.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\foldcode.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\formatting.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\javascript-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\loadmode.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\match-highlighter.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\multiplex.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\overlay.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\pig-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\runmode-standalone.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\runmode.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\search.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\searchcursor.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\simple-hint.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\simple-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\lib\codemirror\util\xml-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\export-servlet.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\callback.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\config.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\lexl.svg" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\spring-context.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\web.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\META-INF\context.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\demo.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\Highcharts-icon-160px.png" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\codemirror.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\codemirror.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\index.html" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\javascript\typescript.html" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\xml\index.html" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\mode\xml\xml.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\closetag.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\dialog.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\dialog.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\foldcode.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\formatting.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\javascript-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\loadmode.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\match-highlighter.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\multiplex.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\overlay.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\pig-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\runmode-standalone.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\runmode.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\search.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\searchcursor.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\simple-hint.css" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\simple-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\lib\codemirror\util\xml-hint.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\export-servlet.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\callback.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\config.js" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\lexl.svg" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\aopalliance-1.0.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\asm-3.3.1.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\cglib-2.2.2.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-codec-1.7.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-fileupload-1.2.2.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-io-1.3.2.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-lang-2.5.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-logging-1.1.1.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\gson-2.2.2.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\highcharts-export-convert-2.1.0.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\jstl-1.1.2.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\log4j-1.2.14.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-aop-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-beans-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-context-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-core-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-expression-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-web-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-webmvc-3.2.0.RELEASE.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\standard-1.1.2.jar" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\spring-context.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\web.xml" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\demo_jsp.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\error_jsp.java" />
+    <Content Include="Page\exporting-server\java\highcharts-export\pom.xml" />
+    <Content Include="Page\exporting-server\phantomjs\data.js" />
+    <Content Include="Page\exporting-server\phantomjs\highcharts-convert.js" />
+    <Content Include="Page\exporting-server\phantomjs\highcharts-more.js" />
+    <Content Include="Page\exporting-server\phantomjs\highcharts.js" />
+    <Content Include="Page\exporting-server\phantomjs\highstock.js" />
+    <Content Include="Page\exporting-server\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Page\gfx\vml-radial-gradient.png" />
+    <Content Include="Page\graphics\skies.jpg" />
+    <Content Include="Page\graphics\snow.png" />
+    <Content Include="Page\graphics\sun.png" />
+    <Content Include="Page\js\adapters\mootools-adapter.js" />
+    <Content Include="Page\js\adapters\mootools-adapter.src.js" />
+    <Content Include="Page\js\adapters\prototype-adapter.js" />
+    <Content Include="Page\js\adapters\prototype-adapter.src.js" />
+    <Content Include="Page\js\highcharts-more.js" />
+    <Content Include="Page\js\highcharts-more.src.js" />
+    <Content Include="Page\js\highcharts.js" />
+    <Content Include="Page\js\highcharts.src.js" />
+    <Content Include="Page\js\modules\annotations.js" />
+    <Content Include="Page\js\modules\annotations.src.js" />
+    <Content Include="Page\js\modules\canvas-tools.js" />
+    <Content Include="Page\js\modules\canvas-tools.src.js" />
+    <Content Include="Page\js\modules\data.js" />
+    <Content Include="Page\js\modules\data.src.js" />
+    <Content Include="Page\js\modules\exporting.js" />
+    <Content Include="Page\js\modules\exporting.src.js" />
+    <Content Include="Page\js\modules\funnel.js" />
+    <Content Include="Page\js\modules\funnel.src.js" />
+    <Content Include="Page\js\modules\heatmap.js" />
+    <Content Include="Page\js\modules\heatmap.src.js" />
+    <Content Include="Page\js\modules\map.js" />
+    <Content Include="Page\js\modules\map.src.js" />
+    <Content Include="Page\js\themes\dark-blue.js" />
+    <Content Include="Page\js\themes\dark-green.js" />
+    <Content Include="Page\js\themes\gray.js" />
+    <Content Include="Page\js\themes\grid.js" />
+    <Content Include="Page\js\themes\skies.js" />
+    <Content Include="Scripts\audio.js" />
+    <Content Include="Scripts\BaiduMap\MapOnWeb.js" />
+    <Content Include="Scripts\DragDrop.js" />
+    <Content Include="Scripts\geolocation.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\BaiduMap\BaiduMapBase.js" />
+    <Content Include="Scripts\menu.js" />
+    <Content Include="Scripts\storage.js" />
+    <Content Include="Source\BaiduMap\endPoint.png" />
+    <Content Include="Source\BaiduMap\greenPoint.png" />
+    <Content Include="Source\BaiduMap\redPoint.png" />
+    <Content Include="Source\BaiduMap\startPoint.png" />
+    <Content Include="Source\BaiduMap\thinPoint.png" />
+    <Content Include="Source\Data\SyncData.txt" />
+    <Content Include="Source\editarea_0_8_2\change_log.txt" />
+    <Content Include="Source\editarea_0_8_2\docs\about.html" />
+    <Content Include="Source\editarea_0_8_2\docs\compatibility.html" />
+    <Content Include="Source\editarea_0_8_2\docs\configuration.html" />
+    <Content Include="Source\editarea_0_8_2\docs\credits.html" />
+    <Content Include="Source\editarea_0_8_2\docs\customization_language.html" />
+    <Content Include="Source\editarea_0_8_2\docs\customization_plugin.html" />
+    <Content Include="Source\editarea_0_8_2\docs\customization_syntax.html" />
+    <Content Include="Source\editarea_0_8_2\docs\doc_style.css" />
+    <Content Include="Source\editarea_0_8_2\docs\include.html" />
+    <Content Include="Source\editarea_0_8_2\docs\index.html" />
+    <Content Include="Source\editarea_0_8_2\docs\installation.html" />
+    <Content Include="Source\editarea_0_8_2\docs\javascript_functions.html" />
+    <Content Include="Source\editarea_0_8_2\docs\license.html" />
+    <Content Include="Source\editarea_0_8_2\edit_area\autocompletion.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\edit_area.css" />
+    <Content Include="Source\editarea_0_8_2\edit_area\edit_area.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\edit_area_full.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\edit_area_functions.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\edit_area_loader.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\elements_functions.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\highlight.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\autocompletion.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\close.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\fullscreen.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\go_to_line.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\help.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\highlight.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\load.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\move.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\newdocument.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\opacity.png" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\processing.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\redo.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\reset_highlight.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\save.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\search.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\smooth_selection.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\spacer.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\statusbar_resize.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\undo.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\images\word_wrap.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\keyboard.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\bg.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\cs.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\de.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\dk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\en.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\eo.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\es.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\fi.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\fr.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\hr.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\it.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\ja.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\mk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\nl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\pl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\pt.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\ru.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\sk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\langs\zh.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\license_apache.txt" />
+    <Content Include="Source\editarea_0_8_2\edit_area\license_bsd.txt" />
+    <Content Include="Source\editarea_0_8_2\edit_area\license_lgpl.txt" />
+    <Content Include="Source\editarea_0_8_2\edit_area\manage_area.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\charmap.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\css\charmap.css" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\images\charmap.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\jscripts\map.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\bg.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\cs.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\de.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\dk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\en.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\eo.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\es.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\fr.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\hr.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\it.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\ja.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\mk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\nl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\pl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\pt.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\ru.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\sk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\langs\zh.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\charmap\popup.html" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\css\test.css" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\images\test.gif" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\bg.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\cs.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\de.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\dk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\en.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\eo.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\es.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\fr.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\hr.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\it.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\ja.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\mk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\nl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\pl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\pt.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\ru.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\sk.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\langs\zh.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\test.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\plugins\test\test2.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\regexp.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\basic.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\brainfuck.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\c.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\coldfusion.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\cpp.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\css.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\html.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\java.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\js.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\pas.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\perl.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\php.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\python.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\robotstxt.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\ruby.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\sql.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\tsql.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\vb.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\reg_syntax\xml.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\resize_area.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\search_replace.js" />
+    <Content Include="Source\editarea_0_8_2\edit_area\template.html" />
+    <Content Include="Source\editarea_0_8_2\exemples\exemple_full.html" />
+    <Content Include="Source\editarea_0_8_2\license_apache.txt" />
+    <Content Include="Source\editarea_0_8_2\license_bsd.txt" />
+    <Content Include="Source\editarea_0_8_2\license_lgpl.txt" />
+    <Content Include="Source\editarea_0_8_2\todo.txt" />
+    <Content Include="Source\Grid.Mvc.3\Content\Gridmvc.css" />
+    <Content Include="Source\Grid.Mvc.3\GridMvc.dll" />
+    <Content Include="Source\Grid.Mvc.3\Scripts\gridmvc.js" />
+    <Content Include="Source\Grid.Mvc.3\Scripts\gridmvc.lang.ru.js" />
+    <Content Include="Source\Grid.Mvc.3\Scripts\gridmvc.min.js" />
+    <Content Include="Source\Grid.Mvc.3\Views\Shared\_Grid.cshtml" />
+    <Content Include="Source\Grid.Mvc.3\Views\Shared\_GridPager.cshtml" />
+    <Content Include="Source\Images\ansoft.jpg" />
+    <Content Include="Source\Images\delete.png" />
+    <Content Include="Source\Images\download.png" />
+    <Content Include="Source\Images\edit.png" />
+    <Content Include="Source\Images\logo-bar.jpg" />
+    <Content Include="Source\Images\logo.jpg" />
+    <Content Include="Source\Images\python.png" />
+    <Content Include="Source\Images\python2.png" />
+    <Content Include="Source\Images\set.png" />
+    <Content Include="Source\Images\set_hover.png" />
+    <Content Include="Source\jwysiwyg\ajax-loader.gif" />
+    <Content Include="Source\jwysiwyg\build\copyright.txt" />
+    <Content Include="Source\jwysiwyg\controls\wysiwyg.colorpicker.js" />
+    <Content Include="Source\jwysiwyg\controls\wysiwyg.cssWrap.js" />
+    <Content Include="Source\jwysiwyg\controls\wysiwyg.image.js" />
+    <Content Include="Source\jwysiwyg\controls\wysiwyg.link.js" />
+    <Content Include="Source\jwysiwyg\controls\wysiwyg.table.js" />
+    <Content Include="Source\jwysiwyg\GPL-LICENSE.txt" />
+    <Content Include="Source\jwysiwyg\help\docs\scheme-refactoring.png" />
+    <Content Include="Source\jwysiwyg\help\docs\scheme.png" />
+    <Content Include="Source\jwysiwyg\help\examples\01-basic.html" />
+    <Content Include="Source\jwysiwyg\help\examples\02-full.html" />
+    <Content Include="Source\jwysiwyg\help\examples\03-ajax.html" />
+    <Content Include="Source\jwysiwyg\help\examples\04-resizable.html" />
+    <Content Include="Source\jwysiwyg\help\examples\05-ui-dialogs.html" />
+    <Content Include="Source\jwysiwyg\help\examples\06-hide-heading-buttons.html" />
+    <Content Include="Source\jwysiwyg\help\examples\07-enable-rtl.html" />
+    <Content Include="Source\jwysiwyg\help\examples\08-auto-grow.html" />
+    <Content Include="Source\jwysiwyg\help\examples\09-css-autoloading.html" />
+    <Content Include="Source\jwysiwyg\help\examples\10-custom-controls.html" />
+    <Content Include="Source\jwysiwyg\help\examples\11-plugins.html" />
+    <Content Include="Source\jwysiwyg\help\examples\12-writing-plugins.html" />
+    <Content Include="Source\jwysiwyg\help\examples\13-fileManager.html" />
+    <Content Include="Source\jwysiwyg\help\examples\14-PHP-fileManager.html" />
+    <Content Include="Source\jwysiwyg\help\examples\index.html" />
+    <Content Include="Source\jwysiwyg\help\examples\jw_ajax.html" />
+    <Content Include="Source\jwysiwyg\help\lib\blueprint\ie.css" />
+    <Content Include="Source\jwysiwyg\help\lib\blueprint\print.css" />
+    <Content Include="Source\jwysiwyg\help\lib\blueprint\screen.css" />
+    <Content Include="Source\jwysiwyg\help\lib\jasmine\jasmine-html.js" />
+    <Content Include="Source\jwysiwyg\help\lib\jasmine\jasmine.css" />
+    <Content Include="Source\jwysiwyg\help\lib\jasmine\jasmine.js" />
+    <Content Include="Source\jwysiwyg\help\lib\jquery.js" />
+    <Content Include="Source\jwysiwyg\help\lib\jquery.simplemodal.css" />
+    <Content Include="Source\jwysiwyg\help\lib\jquery.simplemodal.js" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\autoload\jquery.autoload.js" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\CHANGELOG.html" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\css\farbtastic.css" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\demo\demo1.html" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\demo\demo2.html" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\farbtastic.js" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\images\marker.png" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\images\mask.png" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\images\wheel.png" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\LICENSE.txt" />
+    <Content Include="Source\jwysiwyg\help\lib\plugins\farbtastic\README.html" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.blind.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.bounce.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.clip.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.core.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.drop.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.explode.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.fold.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.highlight.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.pulsate.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.scale.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.shake.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.slide.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.effects.transfer.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.accordion.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.accordion.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.all.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.autocomplete.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.base.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.button.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.button.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.core.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.core.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.datepicker.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.datepicker.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.dialog.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.dialog.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.draggable.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.droppable.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.mouse.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.position.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.progressbar.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.progressbar.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.resizable.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.resizable.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.selectable.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.slider.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.slider.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.sortable.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.tabs.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.tabs.js" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.theme.css" />
+    <Content Include="Source\jwysiwyg\help\lib\ui\jquery.ui.widget.js" />
+    <Content Include="Source\jwysiwyg\help\lib\x.png" />
+    <Content Include="Source\jwysiwyg\help\tests\css\issue014-cg.css" />
+    <Content Include="Source\jwysiwyg\help\tests\css\issue145.css" />
+    <Content Include="Source\jwysiwyg\help\tests\images\quote02.gif" />
+    <Content Include="Source\jwysiwyg\help\tests\issue005.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue014-cg.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue016.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue026.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue029.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue130.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue145.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue152_iframe.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue154.html" />
+    <Content Include="Source\jwysiwyg\help\tests\issue214-cg.html" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\154.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\159.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\controls\html.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\functions\insertHtml.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\helper.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\jwysiwyg.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\plugins.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\plugins\i18n.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\jasmine\plugins\rmFormat.spec.js" />
+    <Content Include="Source\jwysiwyg\help\tests\run-jasmine-tests.html" />
+    <Content Include="Source\jwysiwyg\i18n\lang.ca.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.cs.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.de.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.en.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.es.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.fa.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.fr.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.he.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.hr.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.it.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.ja.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.nb.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.nl.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.pl.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.pt_br.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.ru.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.se.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.sl.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.tr.js" />
+    <Content Include="Source\jwysiwyg\i18n\lang.zh-cn.js" />
+    <Content Include="Source\jwysiwyg\index.html" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.bg.png" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.css" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.gif" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.jpg" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.js" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.modal.css" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.no-alpha.gif" />
+    <Content Include="Source\jwysiwyg\jquery.wysiwyg.old-school.css" />
+    <Content Include="Source\jwysiwyg\lib\jquery1.5.js" />
+    <Content Include="Source\jwysiwyg\MIT-LICENSE.txt" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\icon.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\application.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\code.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\css.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\db.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\directory.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\doc.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\file.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\film.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\flash.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\folder_open.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\html.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\java.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\linux.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\mkdir.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\music.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\pdf.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\php.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\picture.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\ppt.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\prev-directory.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\psd.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\remove.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\rename.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\ruby.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\script.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\txt.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\upload.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\xls.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\images\zip.png" />
+    <Content Include="Source\jwysiwyg\plugins\fileManager\wysiwyg.fileManager.css" />
+    <Content Include="Source\jwysiwyg\plugins\spellchecker\README.txt" />
+    <Content Include="Source\jwysiwyg\plugins\spellchecker\SpellcheckController.java" />
+    <Content Include="Source\jwysiwyg\plugins\spellchecker\wysiwyg.spellchecker.css" />
+    <Content Include="Source\jwysiwyg\plugins\spellchecker\wysiwyg.spellchecker.js" />
+    <Content Include="Source\jwysiwyg\plugins\wysiwyg.autoload.js" />
+    <Content Include="Source\jwysiwyg\plugins\wysiwyg.fileManager.js" />
+    <Content Include="Source\jwysiwyg\plugins\wysiwyg.fullscreen.js" />
+    <Content Include="Source\jwysiwyg\plugins\wysiwyg.i18n.js" />
+    <Content Include="Source\jwysiwyg\plugins\wysiwyg.rmFormat.js" />
+    <Content Include="Source\jwysiwyg\quirks\placeholder.mozilla.js" />
+    <Content Include="Source\jwysiwyg\quirks\toolbarHighlight.interval.js" />
+    <Content Include="Source\jwysiwyg\quirks\toolbarHighlight.keyup.js" />
+    <Content Include="Source\jwysiwyg\src\controls\default.js" />
+    <Content Include="Source\jwysiwyg\src\dialogs\default.css" />
+    <Content Include="Source\jwysiwyg\src\dialogs\default.js" />
+    <Content Include="Source\jwysiwyg\src\jquery.wysiwyg-names-only.html" />
+    <Content Include="Source\jwysiwyg\src\jquery.wysiwyg-names-only.js" />
+    <Content Include="Source\jwysiwyg\src\jquery.wysiwyg.js" />
+    <Content Include="Source\jwysiwyg\src\jwysiwyg.js" />
+    <Content Include="Source\jwysiwyg\src\jwysiwyg\bc.js" />
+    <Content Include="Source\jwysiwyg\src\jwysiwyg\control.js" />
+    <Content Include="Source\jwysiwyg\src\jwysiwyg\dialog.js" />
+    <Content Include="Source\jwysiwyg\src\jwysiwyg\private.js" />
+    <Content Include="Source\jwysiwyg\src\jwysiwyg\public.js" />
+    <Content Include="Source\jwysiwyg\test\basic.html" />
+    <Content Include="Source\jwysiwyg\test\events.html" />
+    <Content Include="Source\jwysiwyg\test\external_toolbar.html" />
+    <Content Include="Source\jwysiwyg\test\jasmine.html" />
+    <Content Include="Source\jwysiwyg\test\jwysiwyg.html" />
+    <Content Include="Source\jwysiwyg\test\multiple_instances.html" />
+    <Content Include="Source\jwysiwyg\test\unified_dialog_ui.html" />
+    <Content Include="Source\Music\偶阵雨.mp3" />
+    <Content Include="Source\Music\爱久见人心.mp3" />
+    <Content Include="Source\nicEditor\demos\demo01.html" />
+    <Content Include="Source\nicEditor\demos\demo02.html" />
+    <Content Include="Source\nicEditor\demos\demo03.html" />
+    <Content Include="Source\nicEditor\demos\demo04.html" />
+    <Content Include="Source\nicEditor\demos\demo05.html" />
+    <Content Include="Source\nicEditor\nicEdit.js" />
+    <Content Include="Source\nicEditor\nicEditorIcons.gif" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCore.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreDefault.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreDjango.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreEclipse.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreEmacs.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreFadeToGrey.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreMDUltra.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreMidnight.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shCoreRDark.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeDefault.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeDjango.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeEclipse.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeEmacs.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeFadeToGrey.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeMDUltra.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeMidnight.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\shThemeRDark.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\compass\_theme_template.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\index.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shAutoloader.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushAppleScript.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushAS3.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushBash.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushColdFusion.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushCpp.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushCSharp.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushCss.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushDelphi.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushDiff.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushErlang.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushGroovy.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushJava.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushJavaFX.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushJScript.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushPerl.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushPhp.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushPlain.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushPowerShell.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushPython.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushRuby.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushSass.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushScala.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushSql.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushVb.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shBrushXml.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shCore.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\scripts\shLegacy.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\src\shAutoloader.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\src\shCore.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\src\shLegacy.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCore.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreDefault.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreDjango.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreEclipse.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreEmacs.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreFadeToGrey.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreMDUltra.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreMidnight.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shCoreRDark.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeDefault.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeDjango.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeEclipse.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeEmacs.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeFadeToGrey.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeMDUltra.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeMidnight.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\styles\shThemeRDark.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\brushes\sass.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\brushes_tests.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\001_basic.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\002_brushes.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\003_script_tag.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\004_url_parsing.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\005_no_gutter.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\006_pad_line_numbers.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\007_collapse.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\007_collapse_interaction.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\008_first_line.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\009_class_name.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\010_highlight.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\011_smart_tabs.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\012_server_side.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\013_html_script.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\cases\014_legacy.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\commonjs_tests.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\js\jquery-1.4.2.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\js\qunit.css" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\js\qunit.js" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\syntaxhighlighter_tests.html" />
+    <Content Include="Source\syntaxhighlighter_3.0.83\tests\theme_tests.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\generated-sources\annotations\" />
+    <Folder Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\surefire\" />
+    <Folder Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\annotations\" />
+    <Folder Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\surefire\" />
+    <Folder Include="Source\jwysiwyg\build\jslint\" />
+    <Folder Include="Source\jwysiwyg\build\uglify\" />
+    <Folder Include="Source\jwysiwyg\test\lib\jasmine\" />
+    <Folder Include="Source\jwysiwyg\test\lib\jquery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_TopBar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web\Html5.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web\Js.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web\Css.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web\BaiduMap.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web\HighChart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AsyncService\CodesService.ashx" />
+    <None Include="Page\examples\line-ajax\analytics.tsv" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\app-convert.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\log4j.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\app-convert.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverter.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverterException.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\BlockingQueuePool.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectFactory.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectPool.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\PoolException.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory%24PortStatus.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server%241.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\ServerState.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\TimeOut.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\MimeType.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\log4j.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-convert\target\maven-archiver\pom.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\log4j.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\demo.jsp" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\error.jsp" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ExportController.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\log4j.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web.war" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\ExportController.class" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\log4j.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\demo.jsp" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\error.jsp" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\maven-archiver\pom.properties" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_5d238d40_14029e30cf4__8000_00028499.tmp" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_5d238d40_14029e30cf4__8000_00031931.tmp" />
+    <None Include="Page\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_5d238d40_14029e30cf4__8000_00031934.tmp" />
+    <None Include="Page\exporting-server\java\readme.md" />
+    <None Include="Page\exporting-server\phantomjs\readme.md" />
+    <None Include="Page\exporting-server\php\php-batik\index.php" />
+    <Content Include="Views\Web\TextEditor.cshtml" />
+    <Content Include="Views\Web\ViewCode.cshtml" />
+    <Content Include="Views\Web\Grid.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
+    <Content Include="Views\Shared\_GridPager.cshtml" />
+    <Content Include="Views\Codes\Python.cshtml" />
+    <Content Include="Views\Codes\ViewCode.cshtml" />
+    <Content Include="Views\Codes\EditCode.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_Menus.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Codes\Add.cshtml" />
+    <None Include="Source\editarea_0_8_2\edit_area\edit_area_compressor.php" />
+    <None Include="Source\editarea_0_8_2\edit_area\edit_area_full.gz" />
+    <None Include="Source\editarea_0_8_2\edit_area\plugins\test\images\Thumbs.db" />
+    <None Include="Source\Grid.Mvc.3\Grid.mvc.readme" />
+    <None Include="Source\Images\ansoft.psd" />
+    <None Include="Source\Images\icon.psd" />
+    <None Include="Source\Images\logo-bar.psd" />
+    <None Include="Source\Images\logo.psd" />
+    <None Include="Source\Images\set.psd" />
+    <None Include="Source\jwysiwyg\.gitignore" />
+    <None Include="Source\jwysiwyg\.gitmodules" />
+    <None Include="Source\jwysiwyg\build.yml" />
+    <None Include="Source\jwysiwyg\CHANGES.markdown" />
+    <None Include="Source\jwysiwyg\help\bin\compile.bash" />
+    <None Include="Source\jwysiwyg\help\bin\compile.conf" />
+    <None Include="Source\jwysiwyg\help\docs\code_style.rst" />
+    <None Include="Source\jwysiwyg\help\docs\contributing.rst" />
+    <None Include="Source\jwysiwyg\help\docs\get_dia.rst" />
+    <None Include="Source\jwysiwyg\help\docs\internals.rst" />
+    <None Include="Source\jwysiwyg\help\docs\plugins.rst" />
+    <None Include="Source\jwysiwyg\help\docs\scheme-refactoring.dia" />
+    <None Include="Source\jwysiwyg\help\docs\scheme.dia" />
+    <None Include="Source\jwysiwyg\help\htmlentity\.gitignore" />
+    <None Include="Source\jwysiwyg\help\htmlentity\db.csv" />
+    <None Include="Source\jwysiwyg\help\htmlentity\Gemfile" />
+    <None Include="Source\jwysiwyg\help\htmlentity\unicode4jwysiwyg.pl" />
+    <None Include="Source\jwysiwyg\help\htmlentity\unicode4jwysiwyg.rb" />
+    <None Include="Source\jwysiwyg\help\lib\jasmine\MIT.LICENSE" />
+    <None Include="Source\jwysiwyg\help\tests\issue152.xhtml" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\Perl\file_manager.pl" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\Perl\mkdir_handler.pl" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\Perl\move_handler.pl" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\Perl\remove_handler.pl" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\Perl\rename_handler.pl" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\Perl\upload_handler.pl" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\PHP\common.php" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\PHP\config.php" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\PHP\file-manager.php" />
+    <None Include="Source\jwysiwyg\plugins\fileManager\handlers\PHP\handlers.php" />
+    <None Include="Source\jwysiwyg\Rakefile" />
+    <None Include="Source\jwysiwyg\README.rst" />
+    <None Include="Source\syntaxhighlighter_3.0.83\compass\config.rb" />
+    <None Include="Source\syntaxhighlighter_3.0.83\LGPL-LICENSE" />
+    <None Include="Source\syntaxhighlighter_3.0.83\MIT-LICENSE" />
+    <None Include="Source\syntaxhighlighter_3.0.83\tests\.rvmrc" />
+    <None Include="Source\syntaxhighlighter_3.0.83\tests\webrick.rb" />
+    <None Include="Source\syntaxhighlighter_3.0.83\tests\webrick.sh" />
+    <Content Include="Views\Codes\AddOperation.cshtml" />
+    <Content Include="Views\Codes\List.cshtml" />
+    <Content Include="Views\Task\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ansoft.Education.EF\Ansoft.Education.EF.csproj">
+      <Project>{9F07F930-D89F-4DE7-80D4-6F44403F9DF4}</Project>
+      <Name>Ansoft.Education.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50843</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

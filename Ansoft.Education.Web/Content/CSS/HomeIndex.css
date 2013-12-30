@@ -1,0 +1,29 @@
+﻿p
+{
+    padding-left:24px;
+    line-height:12px;
+}
+h2
+{
+    color:Red;
+}
+
+.link-p-a
+{
+   display:block;
+   color:Black;
+   text-decoration:none;
+   font-size: 12px;
+   text-align: left;
+   padding-left:24px;
+   line-height:12px;
+   margin-top:5px;
+}
+
+
+.link-p-a:hover
+{
+  cursor:pointer;
+  color:red; 
+}
+

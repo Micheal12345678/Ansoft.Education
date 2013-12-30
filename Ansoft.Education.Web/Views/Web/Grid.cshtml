@@ -1,0 +1,21 @@
+﻿@model IEnumerable< Ansoft.Education.Web.Controllers.Client>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Grid";
+}
+
+<h2>
+    Grid</h2>
+
+
+
+<div style="width:500px;">
+        @Html.Grid(Model).Columns(columns => 
+                    {
+                        columns.Add(c => c.Id).Titled("Client ID");
+                        columns.Add(c => c.Name).Titled("Name").Filterable(true);
+                        columns.Add(c => c.Email).Titled("Email");
+                    }).WithPaging(3).Sortable(true)
+</div>
+

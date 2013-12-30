@@ -1,0 +1,169 @@
+﻿.ansoft-list-frame
+{
+    width: 700px;
+    height: auto;
+}
+
+.ansoft-list-frame-header
+{
+    width: 700px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid silver;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+.ansoft-list-frame-row
+{
+    width: 700px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid silver;
+    border-top: none;
+    font-size: 12px;
+}
+
+
+.ansoft-list-frame-header-span-ForCodeName
+{
+    float: left;
+    width: 400px;
+}
+
+.ansoft-list-frame-header-span-ForCodeName:hover
+{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+
+
+.ansoft-list-frame-header-span-ForCodeAuthor
+{
+    float: left;
+    width: 120px;
+    border-left: 1px solid silver;
+    border-right: 1px solid silver;
+    text-align: center;
+}
+
+.ansoft-list-frame-header-span-ForCodeAuthor:hover
+{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+
+.ansoft-list-frame-header-span-ForCodeTime
+{
+    float: left;
+    width: 178px;
+    text-align: center;
+}
+
+.ansoft-list-frame-header-span-ForCodeTime:hover
+{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+
+.ansoft-list-frame-row-span-ForCodeName
+{
+    float: left;
+    width: 300px;
+}
+
+.ansoft-list-frame-row-span-ForCode-Operation
+{
+    float: left;
+    width: 100px;
+    height:25px;
+    margin-top:3px;
+    visibility:hidden;
+}
+
+.ansoft-list-frame-row-span-ForCode-Operation a
+{
+    color:White;
+}
+
+.ansoft-list-frame-row-span-ForCodeAuthor
+{
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+
+.ansoft-list-frame-row-span-ForCodeTime
+{
+    float: left;
+    width: 178px;
+    text-align: center;
+}
+
+
+.code-item
+{
+    height: 100px;
+    width: 700px;
+    border: 1px solid silver; /*border-bottom: 1px solid silver;*/
+    margin-bottom: 5px;
+}
+
+.code-item:hover
+{
+    border: 1px solid red;
+}
+
+.code-item-logo
+{
+    margin-top: 11px;
+    margin-left: 11px; /*margin-bottom:auto;*/
+    height: 76px;
+    width: 76px; /*border: 1px solid silver;*/
+    float: left;
+}
+
+.code-item-row
+{
+    float: left;
+    width: 612px;
+    height: 25px;
+    line-height: 25px;
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+
+.code-item-row-align-right
+{
+    text-align: right;
+    border-bottom: none;
+}
+
+
+.code-item-description
+{
+    float: left;
+    width: 612px;
+    height: 48px;
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+
+
+.img-row-icon
+{
+    width:16px; 
+    height:16px;
+    padding-top:3px;
+    margin-left:10px;
+    
+}
+
+
+.img-row-icon:hover
+{
+    cursor:pointer;
+}
+
+
+

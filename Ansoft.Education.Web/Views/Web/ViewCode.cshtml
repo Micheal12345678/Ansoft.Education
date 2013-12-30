@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "ViewCode";
+}
+
+<link href="@Url.Content("~/Source/syntaxhighlighter_3.0.83/styles/shCore.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Source/syntaxhighlighter_3.0.83/styles/shThemeDefault.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Source/syntaxhighlighter_3.0.83/styles/shCoreRDark.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Source/syntaxhighlighter_3.0.83/styles/shThemeRDark.css")" rel="stylesheet" type="text/css" />
+@*<link href="@Url.Content("~/Source/syntaxhighlighter_3.0.83/styles/shCoreFadeToGrey.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Source/syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css")" rel="stylesheet" type="text/css" />*@
+
+@*<script src="@Url.Content("~/Source/syntaxhighlighter_3.0.83/scripts/shCore.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Source/syntaxhighlighter_3.0.83/scripts/shBrushPython.js")" type="text/javascript"></script>*@
+
+
+<h2>ViewCode</h2>
+
+
+<pre class="brush: python">
+import os
+print(os.listdir())
+
+#Population 可以说是共有变量
+#__value  才能约定为私有变量,加两个下划线
+#self.name 表示内部特定的属性
+#__init__ 构造函数
+#__del__ 析构函数
+
+class Person:
+    #An empty block
+    pass 
+    #类的变量问题
+    #Python把所有的都当做object，有些属性变量也是共用的
+    population = 0 #计数人员的共用变量
+
+    #__init__类似于构造函数
+    def __init__(self,name):
+        self.name = name
+        print('(Initializing %s)'%self.name)
+        Person.population += 1
+    def sayHi(self):
+        '''Greeting by the person.
+           Really, that's all it does.'''
+        print('Hi, my name is %s.'%self.name)
+    
+    def __del__(self):
+        '''I am dying.'''
+        print ('%s says bye.'%self.name)
+        Person.population -= 1
+        if Person.population == 0:
+            print('I am the last one.')
+        else:
+            print('There are still %d people left.'%Person.population)
+
+    def howMany(self):
+        '''Prints the current population.'''
+        if Person.population == 1:
+            print('I am the only person here.')
+        else:
+            print('We have %d persons here.'%Person.population)
+
+#init the class
+p = Person('徐守安')
+#显示其内存地址
+print(p)
+p.sayHi()
+
+
+swaroop = Person('Swaroop')
+swaroop.sayHi()
+swaroop.howMany()
+kalam = Person('Abdul Kalam')
+kalam.sayHi()
+kalam.howMany()
+swaroop.sayHi()
+swaroop.howMany()
+
+
+#继承机制
+#teacher & student  是子类
+print("----------继承关系--------------")
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('(Initialized SchoolMember: %s)' %self.name)
+    def tell(self):
+        '''Tell my details.'''
+        print('Name:"%s" Age:"%s"' %(self.name, self.age))
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print('(Initialized Teacher: %s)' %self.name)
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Salary: "%d"' % self.salary)
+
+class Student(SchoolMember):
+    '''Represents a Student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print('(Initialized Student: %s)' %self.name)
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Marks:: "%d"' % self.marks)
+
+t = Teacher('Mrs. Shrividya', 40, 30000)
+s = Student('Swaroop', 22, 75)
+
+print() # prints a blank line
+members = [t, s]
+for member in members:
+    member.tell() # works for both Teachers and Students
+</pre>
+
+
+<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+<script type="text/javascript">
+    SyntaxHighlighter.all()
+</script>
